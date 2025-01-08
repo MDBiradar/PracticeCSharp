@@ -1,4 +1,6 @@
-﻿using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.FactoryPattern;
+﻿using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern.AutoMobile;
+using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern.RealEstate;
+using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.FactoryPattern;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +14,40 @@ namespace PracticeCSharp.DesignPatterns
         public static void Run()
         {
             FactoryPattern();
+            BuildPattern();
+        }
+
+        private static void BuildPattern()
+        {
+            HouseConstuction();
+            ManufactureCars();
+        }
+
+        private static void ManufactureCars()
+        {
+            ICarBuilder carBuilder = new ConcreteCarBuilder();
+            CarDirector carDirector = new(carBuilder);
+            carDirector.BuildSportCar();
+            Console.WriteLine(carBuilder.GetCar());
+
+            carBuilder = new ConcreteCarBuilder();
+            carDirector = new(carBuilder);
+            carDirector.BuildNormalCar();
+            Console.WriteLine(carBuilder.GetCar());
+        }
+
+        private static void HouseConstuction()
+        {
+            IHouseBuilder houseBuilder = new ConcreteHouseBuilder();
+            HouseDirector houseDirector = new(houseBuilder);
+            houseDirector.BuildSimpleHouse();
+            Console.WriteLine(houseDirector.GetHouse());
+
+
+            houseBuilder = new ConcreteHouseBuilder();
+            houseDirector = new(houseBuilder);
+            houseDirector.BuildLuxuryHouse();
+            Console.WriteLine(houseDirector.GetHouse());
         }
 
         private static void FactoryPattern()
