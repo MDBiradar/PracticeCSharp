@@ -1,4 +1,5 @@
 ﻿using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern.AutoMobile;
+using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern.Mobile;
 using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern.RealEstate;
 using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.FactoryPattern;
 using System;
@@ -13,14 +14,21 @@ namespace PracticeCSharp.DesignPatterns
     {
         public static void Run()
         {
-            FactoryPattern();
+            //FactoryPattern();
             BuildPattern();
         }
 
         private static void BuildPattern()
         {
-            HouseConstuction();
-            ManufactureCars();
+            //HouseConstuction();
+            //ManufactureCars();
+            BuyMobile();
+        }
+
+        private static void BuyMobile()
+        {
+            Phone phone = new PhoneBuilder() { Brand = "Samsung", Model="Galaxy S24" }.getPhone();
+            Console.WriteLine(phone.ToString());
         }
 
         private static void ManufactureCars()
