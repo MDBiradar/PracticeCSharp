@@ -3,6 +3,7 @@ using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern.Auto
 using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern.Mobile;
 using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern.RealEstate;
 using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.FactoryPattern;
+using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.PrototypePattern;
 using PracticeCSharp.DesignPatterns.StructuralDesignPatterns.AdaptorPattern;
 using PracticeCSharp.DesignPatterns.StructuralDesignPatterns.CompositePattern;
 using System;
@@ -17,16 +18,16 @@ namespace PracticeCSharp.DesignPatterns
     {
         public static void Run()
         {
-            //CreationalDesignPatterns();
-            StructuralDesignPatterns();
+            CreationalDesignPatterns();
+            //StructuralDesignPatterns();
         }
 
         private static void StructuralDesignPatterns()
         {
             Console.WriteLine("  Structural Design Patterns");
             Console.WriteLine("============================== ");
-            //AdaptorPatternHelper.LoggerExample();
-            //CompositePatternHelper.ComputerAssambleExample();
+            AdaptorPatternHelper.LoggerExample();
+            CompositePatternHelper.ComputerAssambleExample();
             CompositePatternHelper.OrganizationStructureExample();
             Console.WriteLine();
         }
@@ -35,15 +36,14 @@ namespace PracticeCSharp.DesignPatterns
         {
             Console.WriteLine("  Creational Design Patterns");
             Console.WriteLine("============================== ");
-            FactoryPatternHelper.TrasnportExample();
-            Console.WriteLine();
+            //FactoryPatternHelper.TrasnportExample();
+            
 
-            BuilderPatternHelper.HouseConstuctionExample();
-            Console.WriteLine();
-            BuilderPatternHelper.ManufactureCarsExample();
-            Console.WriteLine();
-            BuilderPatternHelper.BuyMobileExample();
-            Console.WriteLine();
+            //BuilderPatternHelper.HouseConstuctionExample();           
+            //BuilderPatternHelper.ManufactureCarsExample();           
+            //BuilderPatternHelper.BuyMobileExample();
+            
+            PrototypePatternHelper.PrototypeCarExample();
         }
     }
 }
