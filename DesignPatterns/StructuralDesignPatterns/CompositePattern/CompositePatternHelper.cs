@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PracticeCSharp.DesignPatterns.StructuralDesignPatterns.CompositePattern.OrganizationExample;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace PracticeCSharp.DesignPatterns.StructuralDesignPatterns.CompositePatter
 {
     internal class CompositePatternHelper
     {
-        public static void ComputerAssambleExample()
+        internal static void ComputerAssambleExample()
         {
             IComponent kb = new Leaf("Key Board", 500);
             IComponent mouse = new Leaf("Mouse", 1000);
@@ -34,7 +35,26 @@ namespace PracticeCSharp.DesignPatterns.StructuralDesignPatterns.CompositePatter
             computer.DisplayMessage();
 
         }
-       
 
+        internal static void OrganizationStructureExample()
+        {            
+            IEmployee surya = new Employee("Surya Tangavel", "QA");      
+            IEmployee nikhil = new Employee("Nikhil Chaurasiya", "Software Engineer");
+            IEmployee mallikarjun = new Employee("Mallikarjun Biradar", "Sr. Software Engineer");            
+
+            Manager leadEngineer = new("HariKrishna", "Sr. Lead Engineer");
+            Manager seniorManager = new("Deepak Chauhan", "Senior Manager");
+
+            leadEngineer.AddEmployee(mallikarjun);
+            leadEngineer.AddEmployee(nikhil);
+
+            seniorManager.AddEmployee(surya);
+
+            Manager director = new("Suresh Bala", "Director");            
+            director.AddEmployee(leadEngineer);
+            director.AddEmployee(seniorManager);
+
+            director.ShowEmployee(1);
+        }
     }
 }
