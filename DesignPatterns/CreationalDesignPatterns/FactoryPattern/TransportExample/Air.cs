@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticeCSharp.DesignPatterns.CreationalDesignPatterns.FactoryPattern
+namespace PracticeCSharp.DesignPatterns.CreationalDesignPatterns.FactoryPattern.TransportExample
 {
     internal class Air : ITransport
     {

@@ -4,24 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticeCSharp.DesignPatterns.CreationalDesignPatterns.FactoryPattern
+namespace PracticeCSharp.DesignPatterns.CreationalDesignPatterns.FactoryPattern.TransportExample
 {
     internal class TransportFactory
     {
-       public static ITransport? GetInstance(string mode)
-       {
+        public static ITransport? GetInstance(string mode)
+        {
 
             if (mode == null)
                 return null;
 
             if (mode.Equals("truck", StringComparison.OrdinalIgnoreCase))
                 return new Truck();
-            else if(mode.Equals("ship", StringComparison.OrdinalIgnoreCase))
+            else if (mode.Equals("ship", StringComparison.OrdinalIgnoreCase))
                 return new Ship();
             else if (mode.Equals("air", StringComparison.OrdinalIgnoreCase))
                 return new Air();
-            else 
+            else
                 return null;
-       }
+        }
     }
 }

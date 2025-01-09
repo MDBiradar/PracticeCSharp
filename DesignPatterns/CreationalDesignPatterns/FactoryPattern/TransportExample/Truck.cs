@@ -1,4 +1,4 @@
-﻿namespace PracticeCSharp.DesignPatterns.CreationalDesignPatterns.FactoryPattern
+﻿namespace PracticeCSharp.DesignPatterns.CreationalDesignPatterns.FactoryPattern.TransportExample
 {
     internal class Truck : ITransport
     {

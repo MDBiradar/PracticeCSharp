@@ -1,7 +1,10 @@
-﻿using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern.AutoMobile;
+﻿using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern;
+using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern.AutoMobile;
 using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern.Mobile;
 using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern.RealEstate;
 using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.FactoryPattern;
+using PracticeCSharp.DesignPatterns.StructuralDesignPatterns.AdaptorPattern;
+using PracticeCSharp.DesignPatterns.StructuralDesignPatterns.CompositePattern;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,57 +17,32 @@ namespace PracticeCSharp.DesignPatterns
     {
         public static void Run()
         {
-            //FactoryPattern();
-            BuildPattern();
+            CreationalDesignPatterns();
+            StructuralDesignPatterns();
         }
 
-        private static void BuildPattern()
+        private static void StructuralDesignPatterns()
         {
-            //HouseConstuction();
-            //ManufactureCars();
-            BuyMobile();
+            Console.WriteLine("  Structural Design Patterns");
+            Console.WriteLine("============================== ");
+            AdaptorPatternHelper.LoggerExample();
+            CompositePatternHelper.ComputerAssambleExample();
+            Console.WriteLine();
         }
 
-        private static void BuyMobile()
+        private static void CreationalDesignPatterns()
         {
-            Phone phone = new PhoneBuilder() { Brand = "Samsung", Model="Galaxy S24" }.getPhone();
-            Console.WriteLine(phone.ToString());
-        }
+            Console.WriteLine("  Creational Design Patterns");
+            Console.WriteLine("============================== ");
+            FactoryPatternHelper.TrasnportExample();
+            Console.WriteLine();
 
-        private static void ManufactureCars()
-        {
-            ICarBuilder carBuilder = new ConcreteCarBuilder();
-            CarDirector carDirector = new(carBuilder);
-            carDirector.BuildSportCar();
-            Console.WriteLine(carBuilder.GetCar());
-
-            carBuilder = new ConcreteCarBuilder();
-            carDirector = new(carBuilder);
-            carDirector.BuildNormalCar();
-            Console.WriteLine(carBuilder.GetCar());
-        }
-
-        private static void HouseConstuction()
-        {
-            IHouseBuilder houseBuilder = new ConcreteHouseBuilder();
-            HouseDirector houseDirector = new(houseBuilder);
-            houseDirector.BuildSimpleHouse();
-            Console.WriteLine(houseDirector.GetHouse());
-
-
-            houseBuilder = new ConcreteHouseBuilder();
-            houseDirector = new(houseBuilder);
-            houseDirector.BuildLuxuryHouse();
-            Console.WriteLine(houseDirector.GetHouse());
-        }
-
-        private static void FactoryPattern()
-        {
-            List<ITransport?> transportModes = new List<ITransport?>();
-            transportModes.Add(TransportFactory.GetInstance("truck"));
-            transportModes.Add(TransportFactory.GetInstance("Ship"));
-            transportModes.Add(TransportFactory.GetInstance("air"));
-            transportModes.ForEach(tm => Console.WriteLine(tm?.Delivery()));
+            BuilderPatternHelper.HouseConstuctionExample();
+            Console.WriteLine();
+            BuilderPatternHelper.ManufactureCarsExample();
+            Console.WriteLine();
+            BuilderPatternHelper.BuyMobileExample();
+            Console.WriteLine();
         }
     }
 }
