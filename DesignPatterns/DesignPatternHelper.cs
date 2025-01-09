@@ -17,7 +17,7 @@ namespace PracticeCSharp.DesignPatterns
     {
         public static void Run()
         {
-            CreationalDesignPatterns();
+            //CreationalDesignPatterns();
             StructuralDesignPatterns();
         }
 
@@ -25,8 +25,9 @@ namespace PracticeCSharp.DesignPatterns
         {
             Console.WriteLine("  Structural Design Patterns");
             Console.WriteLine("============================== ");
-            AdaptorPatternHelper.LoggerExample();
-            CompositePatternHelper.ComputerAssambleExample();
+            //AdaptorPatternHelper.LoggerExample();
+            //CompositePatternHelper.ComputerAssambleExample();
+            CompositePatternHelper.OrganizationStructureExample();
             Console.WriteLine();
         }
 
