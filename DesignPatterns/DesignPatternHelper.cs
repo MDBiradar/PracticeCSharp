@@ -1,4 +1,5 @@
-﻿using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern;
+﻿using PracticeCSharp.DesignPatterns.BehaviouralDesignPatterns.ObserverPattern.ChannelSubcriptionExample;
+using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern;
 using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern.AutoMobile;
 using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern.Mobile;
 using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern.RealEstate;
@@ -18,9 +19,24 @@ namespace PracticeCSharp.DesignPatterns
     {
         public static void Run()
         {
-            CreationalDesignPatterns();
+            //CreationalDesignPatterns();
             //StructuralDesignPatterns();
+            BehaviouralDesignPatterns();
         }
+
+        private static void CreationalDesignPatterns()
+        {
+            Console.WriteLine("  Creational Design Patterns");
+            Console.WriteLine("============================== ");
+            //FactoryPatternHelper.TrasnportExample();
+
+
+            //BuilderPatternHelper.HouseConstuctionExample();           
+            //BuilderPatternHelper.ManufactureCarsExample();           
+            //BuilderPatternHelper.BuyMobileExample();
+
+            PrototypePatternHelper.PrototypeCarExample();
+        }       
 
         private static void StructuralDesignPatterns()
         {
@@ -32,18 +48,13 @@ namespace PracticeCSharp.DesignPatterns
             Console.WriteLine();
         }
 
-        private static void CreationalDesignPatterns()
+        private static void BehaviouralDesignPatterns()
         {
-            Console.WriteLine("  Creational Design Patterns");
-            Console.WriteLine("============================== ");
-            //FactoryPatternHelper.TrasnportExample();
-            
-
-            //BuilderPatternHelper.HouseConstuctionExample();           
-            //BuilderPatternHelper.ManufactureCarsExample();           
-            //BuilderPatternHelper.BuyMobileExample();
-            
-            PrototypePatternHelper.PrototypeCarExample();
+            Console.WriteLine("  Behavioural Design Patterns");
+            Console.WriteLine("=============================== ");
+            ObserverPatternHelper.SubcribeChannelExample();
+            Console.WriteLine();
         }
+
     }
 }
