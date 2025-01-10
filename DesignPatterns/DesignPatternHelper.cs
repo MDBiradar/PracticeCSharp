@@ -5,6 +5,7 @@ using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern.Mobi
 using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.BuilderPattern.RealEstate;
 using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.FactoryPattern;
 using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.PrototypePattern;
+using PracticeCSharp.DesignPatterns.CreationalDesignPatterns.SingletonPattern;
 using PracticeCSharp.DesignPatterns.StructuralDesignPatterns.AdaptorPattern;
 using PracticeCSharp.DesignPatterns.StructuralDesignPatterns.CompositePattern;
 using System;
@@ -19,9 +20,9 @@ namespace PracticeCSharp.DesignPatterns
     {
         public static void Run()
         {
-            //CreationalDesignPatterns();
+            CreationalDesignPatterns();
             //StructuralDesignPatterns();
-            BehaviouralDesignPatterns();
+            //BehaviouralDesignPatterns();
         }
 
         private static void CreationalDesignPatterns()
@@ -35,7 +36,10 @@ namespace PracticeCSharp.DesignPatterns
             //BuilderPatternHelper.ManufactureCarsExample();           
             //BuilderPatternHelper.BuyMobileExample();
 
-            PrototypePatternHelper.PrototypeCarExample();
+            //PrototypePatternHelper.PrototypeCarExample();
+
+            //SingletonPatterHelper.ConfigurationManagerExample();
+            SingletonPatterHelper.ClockExample();
         }       
 
         private static void StructuralDesignPatterns()
