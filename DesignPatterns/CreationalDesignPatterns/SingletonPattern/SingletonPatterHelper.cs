@@ -11,9 +11,7 @@ namespace PracticeCSharp.DesignPatterns.CreationalDesignPatterns.SingletonPatter
     internal class SingletonPatterHelper
     {
         internal static void ConfigurationManagerExample()
-        {
-            Console.WriteLine("Singleton Pattern Example");
-            Console.WriteLine("=========================");
+        {           
 
             var config1 = ConfigurationManager.Instance;
             var config2 = ConfigurationManager.Instance;
