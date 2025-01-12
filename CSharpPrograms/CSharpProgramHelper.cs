@@ -17,8 +17,10 @@ namespace PracticeCSharp.CSharpPrograms
             //PrintStarPatterns.PrintInvertedRightTriangle();
             //PrintStarPatterns.PrintPyramid();
             //PrintStarPatterns.PrintDiamond();
-            PrintStarPatterns.PrintDiamondSimplified();
-
+            //PrintStarPatterns.PrintDiamondSimplified();
+            //PalindromExample.Palindrom();
+            //PalindromExample.PalindromNoInbuildMethod();
+            ReplaceMethod.ReplaceString();
         }
     }
 }
