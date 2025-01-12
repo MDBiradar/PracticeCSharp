@@ -22,6 +22,7 @@ namespace PracticeCSharp.CSharpPrograms
             //PalindromExample.PalindromNoInbuildMethod();
             //ReplaceMethod.ReplaceString();
             //FindDuplicate.FindDuplicates();
-            SearchGivenValues.SearchValues();
+            //SearchGivenValues.SearchValues();
+            IsPrimeNumber.IsPrime();
     }
 }
