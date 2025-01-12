@@ -23,6 +23,6 @@ namespace PracticeCSharp.CSharpPrograms
             //ReplaceMethod.ReplaceString();
             //FindDuplicate.FindDuplicates();
             //SearchGivenValues.SearchValues();
-            IsPrimeNumber.IsPrime();
+            PrimeNumber.IsPrimeNumber();
     }
 }

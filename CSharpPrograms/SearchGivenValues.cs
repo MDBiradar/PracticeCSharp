@@ -10,16 +10,16 @@ namespace PracticeCSharp.CSharpPrograms
             do
             {
                 Console.WriteLine("Enter the number of elements in the array: ");
-                GetValidNumber(out int n);
+                Helper.GetValidNumber(out int n);
                 int[] arr = new int[n];
                 Console.WriteLine("Enter the elements of the array: ");
                 for (int i = 0; i < n; i++)
                 {
-                    GetValidNumber(out int input);
+                    Helper.GetValidNumber(out int input);
                     arr[i] = input;
                 }
                 Console.WriteLine("Enter the value to search: ");
-                GetValidNumber(out int searchValue);
+                Helper.GetValidNumber(out int searchValue);
                 Console.WriteLine(Found(arr, searchValue) ? "Number Found" : "Not Found");                
                 Console.WriteLine("Do you want to continue? (Y/N)");
             } while (Console.ReadLine()?.ToUpper() == "Y");
@@ -35,16 +35,6 @@ namespace PracticeCSharp.CSharpPrograms
                 }
             }
             return false;
-        }
-
-        private static void GetValidNumber(out int searchValue)
-        {
-            bool isValid = int.TryParse(Console.ReadLine(), out searchValue);
-            while (!isValid)
-            {
-                Console.WriteLine("Invalid input. Please enter a valid number.");
-                isValid = int.TryParse(Console.ReadLine(), out searchValue);
-            }
-        }        
+        }  
     }
 }
