@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Buffers;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,7 @@ namespace PracticeCSharp.CSharpPrograms
 {
     public static class CSharpProgramHelper
     {
-        public static void Run()
-        {
+        public static void Run() =>
             //FindXPowerN.GetXPowerN();
             //Recursion.Factorial();
             //FibonacciSeries.FibonacciNumber();
@@ -20,7 +20,8 @@ namespace PracticeCSharp.CSharpPrograms
             //PrintStarPatterns.PrintDiamondSimplified();
             //PalindromExample.Palindrom();
             //PalindromExample.PalindromNoInbuildMethod();
-            ReplaceMethod.ReplaceString();
-        }
+            //ReplaceMethod.ReplaceString();
+            //FindDuplicate.FindDuplicates();
+            SearchGivenValues.SearchValues();
     }
 }
