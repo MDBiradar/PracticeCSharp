@@ -13,7 +13,7 @@ namespace PracticeCSharp.CSharpPrograms
             do
             {
                 Console.WriteLine("Enter a number to check if it is a prime number or not: ");
-                Helper.GetValidNumber(out int num);
+                int num = Helper.GetValidNumber();
                 bool isPrime = IsPrime(num);
                 Console.WriteLine(isPrime ? $"{num} is prime" : $"{num} is not prime");
                 Console.WriteLine("Do you want to continue? (Y/N)");

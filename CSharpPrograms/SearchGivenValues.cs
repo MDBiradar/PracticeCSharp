@@ -10,16 +10,16 @@ namespace PracticeCSharp.CSharpPrograms
             do
             {
                 Console.WriteLine("Enter the number of elements in the array: ");
-                Helper.GetValidNumber(out int n);
+                int n = Helper.GetValidNumber();
                 int[] arr = new int[n];
                 Console.WriteLine("Enter the elements of the array: ");
                 for (int i = 0; i < n; i++)
                 {
-                    Helper.GetValidNumber(out int input);
+                    int input = Helper.GetValidNumber();
                     arr[i] = input;
                 }
                 Console.WriteLine("Enter the value to search: ");
-                Helper.GetValidNumber(out int searchValue);
+                int searchValue = Helper.GetValidNumber();
                 Console.WriteLine(Found(arr, searchValue) ? "Number Found" : "Not Found");                
                 Console.WriteLine("Do you want to continue? (Y/N)");
             } while (Console.ReadLine()?.ToUpper() == "Y");
