@@ -26,7 +26,7 @@ namespace PracticeCSharp.CSharpPrograms
             //PrimeNumber.IsPrimeNumber();
             //MergeSortedArray.MergeArraysExample();
             //BinarySearchSortedArray.BinarySearchExample();
-            HashTableSearch.SearchForUnSortedArray();
-
+            //HashTableSearch.SearchForUnSortedArray();
+            SortingArray.SortInteger();
     }
 }
