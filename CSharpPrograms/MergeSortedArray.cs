@@ -1,20 +1,33 @@
 ﻿
 
+
 namespace PracticeCSharp.CSharpPrograms
 {
     internal class MergeSortedArray
     {
         internal static void MergeArraysExample()
         {
-            SortedSet<int> arr1 = [6, 4, 3, 1];
+            SortedSet<int> arr1 = [6, 4, 3, 1, 4, 6];
             SortedSet<int> arr2  = [9, 8, 4, 5];
 
-            var mergedArray = MergeSortArray(arr1.ToArray(), arr2.ToArray());
+            var mergedArray = MergedSortedArray(arr1.ToArray(), arr2.ToArray());
             Console.WriteLine("Merged Array: "+string.Join(", ", mergedArray));
+
+            HashSet<int> removedDuplicates = RemoveDuplicatesFromArray(mergedArray);
+            Console.WriteLine("Removed Duplicates: " + string.Join(", ", removedDuplicates));
 
         }
 
-        private static int[] MergeSortArray(int[] arr1, int[] arr2)
+        private static HashSet<int> RemoveDuplicatesFromArray(int[] arr1)
+        {
+            HashSet<int> res = [];
+            foreach (int i in arr1) {
+                res.Add(i);
+            }
+            return res;
+        }
+
+        private static int[] MergedSortedArray(int[] arr1, int[] arr2)
         {
             int[] res = new int[(arr1.Length + arr2.Length)];
             int i=0, j= 0, k = 0;

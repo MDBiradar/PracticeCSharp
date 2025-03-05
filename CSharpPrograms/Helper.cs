@@ -8,14 +8,15 @@ namespace PracticeCSharp.CSharpPrograms
 {
     internal class Helper
     {
-        public static void GetValidNumber(out int searchValue)
-        {
-            bool isValid = int.TryParse(Console.ReadLine(), out searchValue);
+        public static int GetValidNumber()
+        {            
+            bool isValid = int.TryParse(Console.ReadLine(), out int searchValue);
             while (!isValid)
             {
                 Console.WriteLine("Invalid input. Please enter a valid number.");
                 isValid = int.TryParse(Console.ReadLine(), out searchValue);
             }
+            return searchValue;
         }
     }
 }

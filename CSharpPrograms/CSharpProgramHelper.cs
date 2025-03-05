@@ -24,6 +24,9 @@ namespace PracticeCSharp.CSharpPrograms
             //FindDuplicate.FindDuplicates();
             //SearchGivenValues.SearchValues();
             //PrimeNumber.IsPrimeNumber();
-            MergeSortedArray.MergeArraysExample();
+            //MergeSortedArray.MergeArraysExample();
+            //BinarySearchSortedArray.BinarySearchExample();
+            //HashTableSearch.SearchForUnSortedArray();
+            SortingArray.SortInteger();
     }
 }
