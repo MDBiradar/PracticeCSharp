@@ -27,6 +27,8 @@ namespace PracticeCSharp.CSharpPrograms
             //MergeSortedArray.MergeArraysExample();
             //BinarySearchSortedArray.BinarySearchExample();
             //HashTableSearch.SearchForUnSortedArray();
-            SortingArray.SortInteger();
+            //SortingArray.SortInteger();
+            // SortStrings.SplitString();
+            SortStrings.SortStringAlphabets();
     }
 }
